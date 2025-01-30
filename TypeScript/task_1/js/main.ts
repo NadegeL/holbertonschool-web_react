@@ -27,7 +27,14 @@ const director1: Directors = {
     fullTimeEmployee: true,
     numberOfReports: 17,
   };
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+const printTeacher: printTeacherFunction = (firstName, lastName)=> {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
 
 console.log(teacher1);
 console.log(director1);
+console.log(printTeacher('John', 'Doe'));
 console.log("The scrit of Typescript is running !");
